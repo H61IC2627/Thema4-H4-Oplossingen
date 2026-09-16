@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beveiligingsincident Meldportaal</title>
+</head>
+
+<body>
+    <header>
+        <h1>Beveiligingsteam — Meldportaal</h1>
+        <p>Meld beveiligingsincidenten en help ons de organisatie veiliger te maken</p>
+        <nav>
+            <a href="#info">Info</a>
+            <a href="#melden">Melden</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="info">
+            <h2>Wat is een beveiligingsincident?</h2>
+            <p>
+                Een <strong>beveiligingsincident</strong> is elke gebeurtenis die de beveiliging van onze IT-systemen
+                bedreigt. Dit kan variëren van verdachte e-mails tot verdwenen laptops. Het melden ervan is cruciaal om
+                schade te voorkomen.
+            </p>
+            <p>Voorbeelden van beveiligingsincidenten:</p>
+            <ul>
+                <li><strong>Phishing:</strong> verdachte e-mails die je naar valse websites lokken</li>
+                <li><strong>Malware-infectie:</strong> virussen of schadelijke software op een computer</li>
+                <li><strong>Datalek of diefstal:</strong> gevoelige informatie die verdwijnt of wordt gestolen</li>
+                <li><strong>DDoS-aanval:</strong> websites of servers die onbereikbaar worden gemaakt</li>
+                <li><strong>Ongeautoriseerde toegang:</strong> iemand die zonder toestemming in systemen inbreekt</li>
+            </ul>
+            <p>
+                Veel organisaties verliezen duizenden euro's door vertraagde rapportage. <strong>Meld incidenten meteen</strong> zodat het
+                beveiligingsteam snel kan handelen.
+            </p>
+        </section>
+
+        <section id="melden">
+            <h2>Meld een beveiligingsincident</h2>
+            <form>
+                <div>
+                    <label for="naam">Naam</label>
+                    <input type="text" id="naam" name="naam" placeholder="Voornaam Achternaam">
+                </div>
+
+                <div>
+                    <label for="email">E-mailadres *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="datum">Datum van het incident</label>
+                    <input type="date" id="datum" name="datum">
+                </div>
+
+                <div>
+                    <label for="type">Type incident</label>
+                    <select id="type">
+                        <option value="" disabled selected>-- Selecteer het type incident --</option>
+                        <option value="phishing">Phishing</option>
+                        <option value="malware">Malware-infectie</option>
+                        <option value="datalek">Datalek of diefstal</option>
+                        <option value="ddos">DDoS-aanval</option>
+                        <option value="toegang">Ongeautoriseerde toegang</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p>Urgentie</p>
+                    <label><input type="radio" name="urgentie" value="laag"> Laag</label>
+                    <label><input type="radio" name="urgentie" value="gemiddeld"> Gemiddeld</label>
+                    <label><input type="radio" name="urgentie" value="hoog"> Hoog</label>
+                </div>
+
+                <div>
+                    <label for="beschrijving">Beschrijving van het incident</label>
+                    <textarea id="beschrijving" name="beschrijving"
+                        placeholder="Beschrijf wat er is gebeurd, waar je het opmerkte en wanneer."></textarea>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="correct" required> De ingevulde informatie is correct. *
+                    </label>
+                </div>
+
+                <button type="submit">Melding versturen</button>
+            </form>
+        </section>
+
+        <aside id="contact">
+            <h3>⚠️ Noodgeval?</h3>
+            <p>Bel het beveiligingsteam direct:</p>
+            <p>+32 2 123 45 67</p>
+            <p>Beschikbaar 24/7</p>
+
+            <h3>Mail</h3>
+            <p><a href="mailto:soc@school.be">soc@school.be</a></p>
+            <p>Antwoord binnen 1 uur</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Organisatie. Alle rechten voorbehouden. | <a href="#">Privacy</a> | <a href="#">Voorwaarden</a>
+        </p>
+    </footer>
+</body>
+
+</html>

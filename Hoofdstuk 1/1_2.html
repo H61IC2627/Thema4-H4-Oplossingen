@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing melden</title>
+</head>
+
+<body>
+    <header>
+        <h1>Phishing</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>
+                Phishing is een veelgebruikte vorm van online oplichting waarbij criminelen zich voordoen als een
+                betrouwbare organisatie. Ze proberen je persoonlijke gegevens te stelen via nepberichten. Deel
+                <em>nooit</em> je wachtwoord of pincode via e-mail of sms.
+            </p>
+        </section>
+
+        <section>
+            <h2>Waaraan herken je phishing?</h2>
+            <ul>
+                <li>Onbekende of vreemde afzender</li>
+                <li>Dringende of dreigende toon</li>
+                <li>Een link die niet klopt</li>
+                <li>Spelfouten</li>
+                <li>De vraag om je wachtwoord of pincode door te geven</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Meld een verdacht bericht</h2>
+            <form>
+                <div>
+                    <label for="email">E-mailadres</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="soort">Soort bericht</label>
+                    <select id="soort">
+                        <option value="email">E-mail</option>
+                        <option value="sms">Sms</option>
+                        <option value="telefoon">Telefoon</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="afzender">Afzender</label>
+                    <input type="text" id="afzender" name="afzender">
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="bevestiging" required> Ik heb niet op de link geklikt.
+                    </label>
+                </div>
+
+                <button type="submit">Verstuur</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Phishing melden</p>
+    </footer>
+</body>
+
+</html>
