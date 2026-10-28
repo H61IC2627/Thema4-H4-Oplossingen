@@ -1,0 +1,57 @@
+/* ========== 1. Variabelen ========== */
+:root {
+    --achtergrond: #dbaf95;
+    --kaartkleur: #eee;
+    --accentkleur: #e94560;
+    --tekstkleur: #f5f5f5;
+}
+
+/* ========== 2. Reset en basisstijlen ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--achtergrond);
+    color: var(--tekstkleur);
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ========== 3. Flexcontainer ========== */
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ========== 4. Kaarten ========== */
+.kaart {
+    flex: 1;
+    background-color: var(--kaartkleur);
+    color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid var(--accentkleur);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* ========== 5. Titel in accentkleur ========== */
+.kaart h2 {
+    color: var(--accentkleur);
+    margin-bottom: 10px;
+}
+
+/* ========== 6. Hover-effect ========== */
+.kaart:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}

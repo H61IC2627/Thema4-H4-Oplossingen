@@ -1,0 +1,209 @@
+/* ========== 1. Variabelen ========== */
+:root {
+    --achtergrond: #121212;
+    --kaartkleur: #1e1e1e;
+    --randkleur: #333;
+    --accentkleur: #e8551e;
+    --tekstkleur: #f0f0f0;
+}
+
+/* ========== 2. Reset en basisstijlen ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--achtergrond);
+    color: var(--tekstkleur);
+    line-height: 1.6;
+}
+
+/* ========== 3. Header: flex, bandnaam links, nav rechts ========== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--kaartkleur);
+    padding: 20px 30px;
+    border-bottom: 3px solid var(--accentkleur);
+}
+
+header h1 {
+    color: var(--accentkleur);
+    font-size: 24px;
+}
+
+/* ========== 4. Navigatie ========== */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--tekstkleur);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accentkleur);
+}
+
+/* ========== 5. Hero ========== */
+.hero {
+    background-color: var(--kaartkleur);
+    border-left: 4px solid var(--accentkleur);
+    border-radius: 8px;
+    padding: 25px 30px;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.hero h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.hero em {
+    color: var(--accentkleur);
+    font-style: italic;
+}
+
+.hero p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* ========== 6. Shows: flexbox met kaarten ========== */
+.shows {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.shows h2 {
+    color: var(--accentkleur);
+    margin-bottom: 15px;
+}
+
+.show-grid {
+    display: flex;
+    gap: 16px;
+}
+
+.show-kaart {
+    flex: 1;
+    background-color: var(--kaartkleur);
+    border: 1px solid var(--randkleur);
+    border-top: 3px solid var(--accentkleur);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.show-kaart h3 {
+    color: var(--accentkleur);
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* ========== 7. Hover op kaarten ========== */
+.show-kaart:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ========== 8. Contactformulier ========== */
+.contact {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: var(--kaartkleur);
+    border: 1px solid var(--randkleur);
+    border-radius: 8px;
+    padding: 25px 30px;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--achtergrond);
+    color: var(--tekstkleur);
+    border: 1px solid var(--randkleur);
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--accentkleur);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: var(--accentkleur);
+    color: white;
+    padding: 12px 0;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c44818;
+}
+
+/* ========== 9. Footer ========== */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #999;
+    border-top: 1px solid var(--randkleur);
+    margin-top: 40px;
+}
+
+/* ========== 10. Responsive ========== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .show-grid {
+        flex-direction: column;
+    }
+
+    .contact {
+        margin: 30px 20px;
+    }
+}

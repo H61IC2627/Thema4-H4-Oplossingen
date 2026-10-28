@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureWatch — Dashboard</title>
+    <link rel="stylesheet" href="2_4.css">
+</head>
+
+<body>
+    <header>
+        <h1>SecureWatch</h1>
+        <nav>
+            <a href="#">Overzicht</a>
+            <a href="#">Meldingen</a>
+            <a href="#">Instellingen</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="stats">
+            <div class="stat-kaart ok">
+                <h3>Systemen online</h3>
+                <p class="getal">47</p>
+            </div>
+            <div class="stat-kaart warn">
+                <h3>Waarschuwingen</h3>
+                <p class="getal">3</p>
+            </div>
+            <div class="stat-kaart danger">
+                <h3>Kritieke meldingen</h3>
+                <p class="getal">1</p>
+            </div>
+            <div class="stat-kaart info">
+                <h3>Updates beschikbaar</h3>
+                <p class="getal">12</p>
+            </div>
+        </section>
+
+        <div class="dashboard">
+            <section class="meldingen">
+                <h2>Recente meldingen</h2>
+                <ul>
+                    <li>Ongeautoriseerde login poging — 14:32</li>
+                    <li>Firewall regel bijgewerkt — 13:10</li>
+                    <li>Backup voltooid — 12:00</li>
+                    <li>SSL-certificaat verloopt over 7 dagen</li>
+                </ul>
+            </section>
+            <aside class="acties">
+                <h2>Snelle acties</h2>
+                <button>Scan starten</button>
+                <button>Wachtwoorden resetten</button>
+                <button>Rapport genereren</button>
+            </aside>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SecureWatch</p>
+    </footer>
+
+</body>
+</html>

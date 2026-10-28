@@ -1,0 +1,198 @@
+/* ========== 1. Variabelen ========== */
+:root {
+    --donker: #0a1628;
+    --kaart: #122240;
+    --rand: #1a3a5c;
+    --accent: #2dd4a8;
+    --waarschuwing: #f59e0b;
+    --tekst: #e0e8f0;
+    --ok: #22c55e;
+    --danger: #ef4444;
+    --info: #3b82f6;
+}
+
+/* ========== 2. Reset en basisstijlen ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--donker);
+    color: var(--tekst);
+    line-height: 1.6;
+}
+
+/* ========== 3. Header: flex ========== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 3px solid var(--accent);
+}
+
+header h1 {
+    color: var(--accent);
+    font-size: 22px;
+}
+
+/* ========== 4. Navigatie ========== */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--tekst);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* ========== 5. Statuskaarten ========== */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.stat-kaart {
+    flex: 1;
+    background-color: var(--kaart);
+    border: 1px solid var(--rand);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-kaart:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.stat-kaart h3 {
+    font-size: 14px;
+    color: #aab;
+    margin-bottom: 8px;
+}
+
+.getal {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Gekleurde linkerranden per kaart */
+.stat-kaart.ok {
+    border-left: 4px solid var(--ok);
+}
+
+.stat-kaart.warn {
+    border-left: 4px solid var(--waarschuwing);
+}
+
+.stat-kaart.danger {
+    border-left: 4px solid var(--danger);
+}
+
+.stat-kaart.info {
+    border-left: 4px solid var(--info);
+}
+
+/* ========== 6. Dashboard: meldingen + acties ========== */
+.dashboard {
+    display: flex;
+    gap: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.meldingen {
+    flex: 2;
+    background-color: var(--kaart);
+    border: 1px solid var(--rand);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.acties {
+    flex: 1;
+    background-color: var(--kaart);
+    border: 1px solid var(--rand);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.meldingen h2,
+.acties h2 {
+    margin-bottom: 20px;
+}
+
+.meldingen ul {
+    list-style: none;
+}
+
+.meldingen li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rand);
+}
+
+.meldingen li:last-child {
+    border-bottom: none;
+}
+
+/* ========== 7. Knoppen ========== */
+.acties button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: var(--accent);
+    color: var(--donker);
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.acties button:hover {
+    background-color: #25b893;
+}
+
+/* ========== 8. Footer ========== */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #778;
+    border-top: 1px solid var(--rand);
+    margin-top: 40px;
+}
+
+/* ========== 9. Responsive ========== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .dashboard {
+        flex-direction: column;
+    }
+}
